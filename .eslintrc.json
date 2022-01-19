@@ -1,0 +1,3 @@
+{
+  "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+}
