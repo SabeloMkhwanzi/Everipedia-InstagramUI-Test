@@ -1,20 +1,16 @@
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import { Box, Button, useColorMode } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import { Navbar } from "../components";
 
 export default function Home() {
-  const { toggleColorMode } = useColorMode();
-  //Wallet connect function
-  const connectWallet = () => {};
-
   return (
-    <div className={styles.container}>
+    <Box>
       <Head>
         <title>Everipedia-InstagramUI-Test</title>
         <meta name="description" content="Everipedia-InstagramUI-Test" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    </div>
+      <Navbar />
+    </Box>
   );
 }
