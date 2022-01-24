@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Box } from "@chakra-ui/react";
-import { Navbar } from "../components";
+import { Navbar, ContentLayout } from "../components";
 
 export default function Home() {
   return (
@@ -11,6 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
+      <ContentLayout />
     </Box>
   );
 }

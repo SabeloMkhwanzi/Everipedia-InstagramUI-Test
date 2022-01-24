@@ -37,8 +37,9 @@ export default function Navbar() {
         w="full"
         px={{ base: 2, sm: 4 }}
         py={4}
-        shadow="md"
+        shadow="2xl"
         borderRadius="2xl"
+        borderWidth={2}
       >
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <HStack display="flex" spacing={3} alignItems="center">
@@ -80,32 +81,20 @@ export default function Navbar() {
                   w="150"
                   variant="solid"
                 >
-                  Color Mode
+                  ColorMode
                 </Button>
               </VStack>
             </Box>
-            <chakra.a
-              href="/"
-              title="Choc Home Page"
-              display="flex"
-              alignItems="center"
-            >
-              <Flex float="right" align="center">
-                <Image
-                  src="/Insta-logo.png"
-                  alt="logo"
-                  width={100}
-                  height={40}
-                />
-              </Flex>
-              {/* <Logo /> */}
 
-              <VisuallyHidden>Instagram</VisuallyHidden>
-            </chakra.a>
+            <Box>
+              <Image src="/Insta-logo.png" alt="logo" width={100} height={40} />
+            </Box>
+
+            {/* <Logo /> */}
           </HStack>
 
           <HStack
-            px="5"
+            px="25"
             spacing={3}
             display={mobileNav.isOpen ? "none" : "flex"}
             alignItems="center"
