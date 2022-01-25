@@ -89,8 +89,6 @@ export default function Navbar() {
             <Box>
               <Image src="/Insta-logo.png" alt="logo" width={100} height={40} />
             </Box>
-
-            {/* <Logo /> */}
           </HStack>
 
           <HStack
@@ -165,7 +163,7 @@ export default function Navbar() {
             <Avatar
               size="sm"
               name="Dan Abrahmov"
-              src="https://bit.ly/dan-abramov"
+              src="https://images.unsplash.com/photo-1642036048293-e0e2c3ff7599?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80,"
             />
           </HStack>
         </Flex>

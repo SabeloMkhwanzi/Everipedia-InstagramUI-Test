@@ -53,7 +53,7 @@ export default function Status() {
   return (
     <div>
       <Box mt={4}>
-        <Stack direction={"row"} my={2} mx={2} spacing={2} align={"center"}>
+        <Stack direction={"row"} my={2} mx={6} spacing={2} align={"center"}>
           {profiles.map((profile, index) => (
             <AvatarGroup key={index}>
               <Avatar

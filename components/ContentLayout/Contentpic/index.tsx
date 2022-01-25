@@ -1,17 +1,14 @@
 import React from "react";
 import {
   Box,
-  Heading,
   useColorModeValue,
   Text,
   Stack,
   Avatar,
   AvatarGroup,
   useBreakpointValue,
-  Flex,
+  IconButton,
 } from "@chakra-ui/react";
-
-import { BsThreeDots } from "react-icons/bs";
 
 const profiles = [
   {
@@ -22,16 +19,18 @@ const profiles = [
 ];
 
 export default function Contentpic() {
+  const breakpoint = useBreakpointValue({ base: "md", md: "lg" });
+
   return (
     <div>
       <Box mt={4}>
-        <Stack direction={"row"} my={4} mx={2} spacing={1} align={"center"}>
+        <Stack direction={"row"} mx={6} spacing={1} align={"center"}>
           {profiles.map((profile, index) => (
             <AvatarGroup key={index}>
               <Avatar
                 name="profile"
                 fit="cover"
-                size={useBreakpointValue({ base: "md", md: "lg" })}
+                size={breakpoint}
                 position={"relative"}
                 zIndex={2}
                 _before={{
@@ -48,10 +47,14 @@ export default function Contentpic() {
                 }}
                 src={profile.image}
               />
-              <Text pt={2} fontSize="xs" pl={6}>
+              <Text
+                textAlign="match-parent"
+                fontSize="xs"
+                fontWeight="semibold"
+                pl={6}
+              >
                 {profile.title}
               </Text>
-              <BsThreeDots />
             </AvatarGroup>
           ))}
         </Stack>
