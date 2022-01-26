@@ -19,7 +19,7 @@ export default function Followers() {
       image:
         "https://images.unsplash.com/photo-1606913852449-8ebf553565cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
       name: "terylucas",
-      follwed: "followed by terylucas + 2 more",
+      follwed: "followed by terylucassyle + 2 more",
     },
   ];
 
@@ -29,7 +29,7 @@ export default function Followers() {
         return (
           <Flex
             direction={{ base: "row", md: "column" }}
-            bg={useColorModeValue("white", "gray.800")}
+            bg={useColorModeValue("", "gray.800")}
             borderRadius="2xl"
           >
             <HStack
@@ -62,7 +62,7 @@ export default function Followers() {
               />
               <VStack>
                 <Box
-                  pr="10rem"
+                  pr="12rem"
                   mt="1"
                   fontWeight="semibold"
                   as="h4"
@@ -71,7 +71,12 @@ export default function Followers() {
                 >
                   {Followers.name}
                 </Box>
-                <Box pl={4} as="span" color="gray.600" fontSize="sm">
+                <Box
+                  color={useColorModeValue("gray.900", "gray.400")}
+                  pl={4}
+                  as="h6"
+                  fontSize="sm"
+                >
                   {Followers.follwed}
                   <Button
                     bg="none"
@@ -79,7 +84,7 @@ export default function Followers() {
                     variant="solid"
                     size="sm"
                     color="blue.500"
-                    left="1.5rem"
+                    left="1rem"
                   >
                     Follow
                   </Button>

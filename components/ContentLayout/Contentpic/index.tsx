@@ -24,7 +24,7 @@ export default function Contentpic() {
   return (
     <div>
       <Box mt={4}>
-        <Stack direction={"row"} mx={6} spacing={1} align={"center"}>
+        <Stack direction={"row"} mx={3} spacing={1} align={"center"}>
           {profiles.map((profile, index) => (
             <AvatarGroup key={index}>
               <Avatar

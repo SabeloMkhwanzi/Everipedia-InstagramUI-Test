@@ -22,10 +22,11 @@ export default function ContentLayout() {
         w="full"
         alignItems="center"
         justifyContent="center"
+        mx="auto"
       >
-        <SimpleGrid columns={[1, null, 2]}>
+        <SimpleGrid columns={[1, null, 2]} spacing={4}>
           <Box
-            mx="auto"
+            mx="2xl"
             rounded="lg"
             shadow="2xl"
             bg={useColorModeValue("white", "gray.800")}

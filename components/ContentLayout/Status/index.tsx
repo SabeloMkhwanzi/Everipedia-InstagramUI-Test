@@ -53,13 +53,13 @@ export default function Status() {
   return (
     <div>
       <Box mt={4}>
-        <Stack direction={"row"} my={2} mx={6} spacing={2} align={"center"}>
+        <Stack direction={"row"} my={1} mx={4} spacing={6} align={"center"}>
           {profiles.map((profile, index) => (
             <AvatarGroup key={index}>
               <Avatar
                 name="profile"
                 fit="cover"
-                size={useBreakpointValue({ base: "md", md: "lg" })}
+                size={useBreakpointValue({ base: "sm", md: "lg" })}
                 position={"relative"}
                 zIndex={2}
                 _before={{
@@ -76,7 +76,7 @@ export default function Status() {
                 }}
                 src={profile.image}
               />
-              <Text pt={24} fontSize="xs" pr={8}>
+              <Text pt={20} fontSize="xs" ml={2}>
                 {/* {profile.title} */}
               </Text>
             </AvatarGroup>

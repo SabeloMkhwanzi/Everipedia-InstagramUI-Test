@@ -9,8 +9,8 @@ import {
   Stack,
   HStack,
   VStack,
-  Text,
   Box,
+  useDisclosure,
 } from "@chakra-ui/react";
 
 import { MainAccount, Footer } from "..";
@@ -19,36 +19,38 @@ export default function Followers() {
   const bg = useColorModeValue("gray.100", "gray.700");
   const breakpoint = useBreakpointValue({ base: "md", md: "lg" });
 
+  const mobileNav = useDisclosure();
+
   const Followers = [
     {
       image:
         "https://images.unsplash.com/photo-1606913852449-8ebf553565cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
       name: "terylucas",
-      follwed: "followed by terylucas + 2 more",
+      follwed: "followed by terylucassyle + 2 more",
     },
     {
       image:
         "https://images.unsplash.com/photo-1607957599370-f40c79556364?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
       name: "laurmamtthews",
-      follwed: "followed by laurmamtthews + 2 more",
+      follwed: "followed by terylucassyle + 2 more",
     },
     {
       image:
         "https://images.unsplash.com/photo-1640448709256-50a08ed0b4fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80,",
       name: "harryprescott",
-      follwed: "followed by harryprescott + 2 more",
+      follwed: "followed by terylucassyle + 2 more",
     },
     {
       image:
         "https://images.unsplash.com/photo-1636140397397-1ae733c295ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
       name: "ednamanz",
-      follwed: "followed by ednamanz + 2 more",
+      follwed: "followed by terylucassyle + 2 more",
     },
     {
       image:
         "https://images.unsplash.com/photo-1636461932038-e32df32d2f5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
       name: "christinaste",
-      follwed: "followed by christinaste + 2 more",
+      follwed: "followed by terylucassyle + 2 more",
     },
   ];
   return (
@@ -63,7 +65,7 @@ export default function Followers() {
         direction={{ base: "column" }}
         w="100"
         bg={{ md: useColorModeValue("white", "gray.800") }}
-        shadow="2xl"
+        shadow="xl"
         borderRadius="2xl"
       >
         <MainAccount />
@@ -71,21 +73,21 @@ export default function Followers() {
         <HStack>
           <Box
             pl={5}
+            color={useColorModeValue("gray.500", "gray.100")}
             fontWeight="semibold"
             as="h4"
             lineHeight="tight"
             isTruncated
-            color="gray.500"
           >
             Suggestions For You
           </Box>
           <Box
-            pl={48}
+            pl={44}
             fontWeight="semibold"
             as="button"
             lineHeight="tight"
             isTruncated
-            color="gray.800"
+            color={useColorModeValue("gray.800", "gray.100")}
           >
             See All
           </Box>
@@ -138,7 +140,12 @@ export default function Followers() {
                   >
                     {Followers.name}
                   </Box>
-                  <Box pl={4} as="span" color="gray.600" fontSize="sm">
+                  <Box
+                    color={useColorModeValue("gray.900", "gray.400")}
+                    pl={4}
+                    as="span"
+                    fontSize="sm"
+                  >
                     {Followers.follwed}
                     <Button
                       bg="none"

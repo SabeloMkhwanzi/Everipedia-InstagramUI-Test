@@ -16,7 +16,10 @@ import {
   VisuallyHidden,
   Avatar,
   useDisclosure,
+  useColorMode,
 } from "@chakra-ui/react";
+
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 
@@ -27,6 +30,7 @@ import { RiMessengerLine } from "react-icons/ri";
 import { BsFillHouseDoorFill, BsHeart } from "react-icons/bs";
 
 export default function Navbar() {
+  const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("white", "gray.800");
   const mobileNav = useDisclosure();
 
@@ -75,14 +79,15 @@ export default function Navbar() {
                   justifySelf="self-start"
                   onClick={mobileNav.onClose}
                 />
-                <Button
-                  borderRadius="2xl"
-                  bg="purple.200"
-                  w="150"
-                  variant="solid"
-                >
-                  ColorMode
+                <Button borderRadius="full" bg="none" onClick={toggleColorMode}>
+                  {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
                 </Button>
+
+                <Avatar
+                  size="sm"
+                  name="Dan Abrahmov"
+                  src="https://images.unsplash.com/photo-1642036048293-e0e2c3ff7599?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80,"
+                />
               </VStack>
             </Box>
 
@@ -103,7 +108,7 @@ export default function Navbar() {
                 children={<AiOutlineSearch />}
               />
               <Input
-                w={150}
+                w={130}
                 type="tel"
                 borderRadius="2xl"
                 placeholder="Search..."
@@ -111,7 +116,7 @@ export default function Navbar() {
             </InputGroup>
 
             <chakra.a
-              p={1}
+              p={0.5}
               color={useColorModeValue("gray.800", "inherit")}
               rounded="sm"
               _hover={{ color: useColorModeValue("gray.800", "gray.600") }}
@@ -121,7 +126,7 @@ export default function Navbar() {
             </chakra.a>
 
             <chakra.a
-              p={1}
+              p={0.5}
               color={useColorModeValue("gray.800", "inherit")}
               rounded="sm"
               _hover={{ color: useColorModeValue("gray.800", "gray.600") }}
@@ -131,7 +136,7 @@ export default function Navbar() {
             </chakra.a>
 
             <chakra.a
-              p={1}
+              p={0.5}
               color={useColorModeValue("gray.800", "inherit")}
               rounded="sm"
               _hover={{ color: useColorModeValue("gray.800", "gray.600") }}
@@ -140,7 +145,7 @@ export default function Navbar() {
               <VisuallyHidden>Like</VisuallyHidden>
             </chakra.a>
 
-            <chakra.a
+            {/* <chakra.a
               p={1}
               color={useColorModeValue("gray.800", "inherit")}
               rounded="sm"
@@ -148,10 +153,10 @@ export default function Navbar() {
             >
               <ImCompass2 />
               <VisuallyHidden>Like</VisuallyHidden>
-            </chakra.a>
+            </chakra.a> */}
 
             <chakra.a
-              p={1}
+              p={0.5}
               color={useColorModeValue("gray.800", "inherit")}
               rounded="sm"
               _hover={{ color: useColorModeValue("gray.800", "gray.600") }}
@@ -159,6 +164,10 @@ export default function Navbar() {
               <BsHeart />
               <VisuallyHidden>Like</VisuallyHidden>
             </chakra.a>
+
+            <Button borderRadius="full" bg="none" onClick={toggleColorMode}>
+              {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            </Button>
 
             <Avatar
               size="sm"
