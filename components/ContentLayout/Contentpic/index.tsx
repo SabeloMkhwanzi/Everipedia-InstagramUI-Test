@@ -1,13 +1,11 @@
 import React from "react";
 import {
   Box,
-  useColorModeValue,
   Text,
   Stack,
   Avatar,
   AvatarGroup,
   useBreakpointValue,
-  IconButton,
 } from "@chakra-ui/react";
 
 const profiles = [

@@ -12,6 +12,7 @@ export default function Footer() {
         >
           ·About ·Help ·Press ·API ·Jobs ·Privacy ·Terms <br /> ·Locations ·Top
           Accounts ·Hashtags ·Language ·English
+          <br />
           <br /> © 2022 INSTAGRAM FROM META
         </chakra.span>
       </Box>

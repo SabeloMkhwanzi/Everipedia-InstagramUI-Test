@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Input,
-  InputGroup,
-  InputRightElement,
-  Button,
-  useColorModeValue,
-  Flex,
-} from "@chakra-ui/react";
+import { Input, InputGroup, InputRightElement, Button } from "@chakra-ui/react";
 
 export default function Comments() {
   const [post, setPost] = React.useState(false);

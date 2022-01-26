@@ -12,3 +12,5 @@ export { default as Bookmark } from "./ContentLayout/SocialIcon/Bookmark";
 export { default as Profilephoto } from "./ContentLayout/Profilephoto";
 export { default as MainAccount } from "./Followers/MainAccount";
 export { default as Footer } from "./Followers/Footer";
+export { default as MobileNav } from "./Navbar/MobileNav";
+export { default as WebNav } from "./Navbar/WebNav";

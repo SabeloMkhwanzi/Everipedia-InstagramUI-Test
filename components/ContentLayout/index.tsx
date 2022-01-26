@@ -26,11 +26,11 @@ export default function ContentLayout() {
       >
         <SimpleGrid columns={[1, null, 2]} spacing={4}>
           <Box
-            mx="2xl"
+            mx="auto"
             rounded="lg"
             shadow="2xl"
             bg={useColorModeValue("white", "gray.800")}
-            maxW="2xl"
+            maxW="xl"
             borderRadius="2xl"
           >
             <Status />

@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Box,
   IconButton,
   useColorModeValue,
   useBreakpointValue,
@@ -11,7 +10,6 @@ import {
 import { BsHeart } from "react-icons/bs";
 import { RiChat1Line } from "react-icons/ri";
 import { FiSend } from "react-icons/fi";
-// import Bookmark from "./Bookmark";
 
 export default function SocialIcon() {
   const breakpoint = useBreakpointValue({ base: "md", md: "lg" });
@@ -43,7 +41,6 @@ export default function SocialIcon() {
           icon={<FiSend />}
         />
       </Stack>
-      {/* <Bookmark /> */}
     </Flex>
   );
 }

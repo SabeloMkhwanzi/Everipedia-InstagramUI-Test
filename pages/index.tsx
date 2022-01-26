@@ -1,17 +1,16 @@
 import Head from "next/head";
-import { Box, SimpleGrid } from "@chakra-ui/react";
-import { Navbar, ContentLayout, Followers } from "../components";
+import { Box } from "@chakra-ui/react";
+import { Navbar, ContentLayout } from "../components";
 
 export default function Home() {
   return (
-    <Box>
+    <Box w={{ base: "750px", md: "auto" }}>
       <Head>
         <title>Everipedia-InstagramUI-Test</title>
         <meta name="description" content="Everipedia-InstagramUI-Test" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-
       <ContentLayout />
     </Box>
   );
